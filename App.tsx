@@ -102,19 +102,19 @@ export default function App() {
   const [creditsOpen, setCreditsOpen] = useState(false);
 
   const [asciiSettings, setAsciiSettings] = useState({
-    resolution: 0.22,
+    resolution: 0.4,
     characters: " .:-=+*#%@",
-    fgColor: "#ffffff",
-    bgColor: "#007BE5",
+    fgColor: "#f0ffc0",
+    bgColor: "#000000",
     invert: false,
   });
 
   const resetSettings = () => {
     setAsciiSettings({
-      resolution: 0.22,
+      resolution: 0.4,
       characters: " .:-=+*#%@",
-      fgColor: "#ffffff",
-      bgColor: "#007BE5",
+      fgColor: "#f0ffc0",
+      bgColor: "#000000",
       invert: false,
     });
     setUserScale(1);
@@ -260,7 +260,7 @@ export default function App() {
       </div>
 
       {/* Right Panel - Controls - Vertically Centered */}
-      <div className="absolute right-8 top-1/2 -translate-y-1/2 z-10 p-4 space-y-8 min-w-[200px]">
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 z-10 p-4 space-y-8 min-w-[200px] hidden">
         {/* Presets */}
         <div>
           <Label
