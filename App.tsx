@@ -104,7 +104,7 @@ export default function App() {
   const [asciiSettings, setAsciiSettings] = useState({
     resolution: 0.4,
     characters: " .:-=+*#%@",
-    fgColor: "#f0ffc0",
+    fgColor: "#0066ff",
     bgColor: "#000000",
     invert: false,
   });
@@ -113,7 +113,7 @@ export default function App() {
     setAsciiSettings({
       resolution: 0.4,
       characters: " .:-=+*#%@",
-      fgColor: "#f0ffc0",
+      fgColor: "#0066ff",
       bgColor: "#000000",
       invert: false,
     });
@@ -240,7 +240,7 @@ export default function App() {
       </Canvas>
 
       {/* Left Panel - Model Selection */}
-      <div className="absolute left-14 top-1/2 -translate-y-1/2 z-10">
+      <div className="absolute left-14 top-1/2 -translate-y-1/2 z-10 hidden">
         <div className="flex flex-col space-y-8">
           {models.map((model) => (
             <button
