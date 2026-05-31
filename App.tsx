@@ -80,7 +80,7 @@ function Text3D({ scale, position }: Text3DProps) {
 const models = [
   {
     name: "Logo",
-    url: "/xensilico-titlt.glb",
+    url: "/ventana.glb",
     baseScale: 0.8,
     position: [0, -0.2, 0] as [number, number, number],
     type: "model" as const,
