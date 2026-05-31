@@ -70,7 +70,7 @@ function Text3D({ scale, position }: Text3DProps) {
         bevelSegments={5}
         rotation={[-1.5, 0, 0]}
 
-      >XENSILICO
+      >VENTANA
         <meshStandardMaterial color="white" />
       </DreiText3D>
     </group>
@@ -80,8 +80,8 @@ function Text3D({ scale, position }: Text3DProps) {
 const models = [
   {
     name: "Logo",
-    url: "/ventana.glb",
-    baseScale: 0.8,
+    url: "/ventana2.glb",
+    baseScale: 1,
     position: [0, -0.2, 0] as [number, number, number],
     type: "model" as const,
   },
@@ -99,7 +99,6 @@ export default function App() {
     models[0].url,
   );
   const [userScale, setUserScale] = useState(1);
-  const [creditsOpen, setCreditsOpen] = useState(false);
 
   const [asciiSettings, setAsciiSettings] = useState({
     resolution: 0.4,
@@ -260,7 +259,7 @@ export default function App() {
       </div>
 
       {/* Right Panel - Controls - Vertically Centered */}
-      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 z-10 p-4 space-y-8 min-w-[200px] pointer-events-none">
+      <div className="absolute right-14 top-1/2 -translate-y-1/2 z-10 p-4 space-y-8 min-w-[200px]">
         {/* Presets */}
         <div>
           <Label
@@ -378,43 +377,7 @@ export default function App() {
           Reset
         </Button>
 
-        {/* Credits as underlined text - closer to Reset */}
-        <div className="-mt-4">
-          <Dialog open={creditsOpen} onOpenChange={setCreditsOpen}>
-            <DialogTrigger asChild>
-              <button
-                className="text-white/60 hover:text-white text-[15px] font-mono underline transition-colors"
-                style={{ fontFamily: "DM Mono, monospace" }}
-              >
-                Credits
-              </button>
-            </DialogTrigger>
-            <DialogContent className="bg-white/95 backdrop-blur-sm">
-              <DialogHeader>
-                <DialogTitle 
-                  className="text-[15px] font-mono text-black"
-                  style={{ fontFamily: "DM Mono, monospace" }}
-                >
-                  Credits
-                </DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4">
-                <div 
-                  className="text-[15px] font-mono text-black leading-relaxed"
-                  style={{ fontFamily: "DM Mono, monospace" }}
-                >
-                  <div>Figma logo by vijay verma</div>
-                </div>
-                <div 
-                  className="text-[15px] font-mono text-black mt-6"
-                  style={{ fontFamily: "DM Mono, monospace" }}
-                >
-                  Creative Commons License
-                </div>
-              </div>
-            </DialogContent>
-          </Dialog>
-        </div>
+        
       </div>
     </div>
   );
