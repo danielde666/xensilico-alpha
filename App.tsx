@@ -140,7 +140,7 @@ export default function App() {
   const finalScale = (currentModel?.baseScale || 1) * userScale;
 
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-screen h-screen relative overflow-hidden">
       {/* Custom CSS for white slider */}
       <style>{`
         .slider-white [data-orientation="horizontal"] {
@@ -260,7 +260,7 @@ export default function App() {
       </div>
 
       {/* Right Panel - Controls - Vertically Centered */}
-      <div className="absolute right-8 top-1/2 -translate-y-1/2 z-10 p-4 space-y-8 min-w-[200px] hidden">
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 z-10 p-4 space-y-8 min-w-[200px] pointer-events-none">
         {/* Presets */}
         <div>
           <Label
