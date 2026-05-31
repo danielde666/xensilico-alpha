@@ -11,7 +11,6 @@ import { Button } from "./components/ui/button";
 import { Label } from "./components/ui/label";
 import { Slider } from "./components/ui/slider";
 import { Checkbox } from "./components/ui/checkbox";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "./components/ui/dialog";
 
 interface ModelProps {
   scale: number;
